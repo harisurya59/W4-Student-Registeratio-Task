@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="display:flex; flex-direction:column; justify-content: center; align-items: center; gap:50px">
+    <form>
+        <h1>Student Form</h1>
+        <table border="1">
+            <tr>
+                <td><label for="name">Name:</label></td>
+                <td><input type="text" placeholder="name" id="name"></td>
+            </tr>
+            <tr>
+                <td><label for="age">age:</label></td>
+                <td><input type="age" placeholder="age" id="age"></td>
+            </tr>
+            <tr>
+                <td><label for="gender">Gender:</label></td>
+                <td>
+                    <input type="radio" id="gender">
+                    Male
+                    <input type="radio" id="gender1">
+                    Female
+                </td>
+            </tr>
+            <tr>
+                <td><label for="course">Course:</label></td>
+                <td>
+                    <select style="width: 100%;" id="course">
+                        <option>javascript</option>
+                        <option>python</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" placeholder="your@gmail.com" id="email"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button style="background-color: aquamarine; width: 100%;" id="btn">save</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <form>
+        <table border="1" id="conatiner1">
+            <tr>
+              <th><labl>Name</labl></th>
+              <th><labl>Age</labl></th>
+              <th><labl>Course</labl></th>
+              <th><labl>Gender</labl></th>
+              <th><labl>EMAIL</labl></th>
+              <th><labl>ACTION</labl></th>
+            </tr> 
+            <tr >
+
+            </tr>
+            <tr>
+
+            </tr>
+        </table>
+    </form>
+</div>
+
+<script>
+
+    var btn = document.getElementById("btn")
+    var name = document.getElementById("name")
+
+    btn.addEventListener("click",function(){
+     var nameinput =document.createAttribute("tr")
+     nameinput.innerHTML = "<tr>"+ name +"</tr>"
+
+     var container1 = document.getElementById("container1")
+     container1.append("nameinput")
+
+    })
+
+</script>
+
+</body>
+</html>
